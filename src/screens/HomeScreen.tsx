@@ -130,11 +130,6 @@ const HomeScreen = ({ navigation }: any) => {
               <Text style={styles.welcomeText}>Welcome to</Text>
               <Text style={styles.appName}>AussieMarket</Text>
             </View>
-            <View style={styles.headerButtons}>
-              <TouchableOpacity style={styles.notificationButton}>
-                <Ionicons name="notifications-outline" size={24} color="#333" />
-              </TouchableOpacity>
-            </View>
           </View>
 
         {/* Search Bar */}

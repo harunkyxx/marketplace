@@ -129,9 +129,7 @@ const SignUpScreen = ({ navigation }: any) => {
     }
   };
 
-  const handleSocialSignUp = (provider: string) => {
-    Alert.alert(`${provider} Registration`, `Registering with ${provider}...`);
-  };
+
 
 
 
@@ -325,32 +323,7 @@ const SignUpScreen = ({ navigation }: any) => {
               </TouchableOpacity>
             </View>
 
-            {/* Social Sign Up */}
-            <View style={styles.socialSection}>
-              <View style={styles.divider}>
-                <View style={styles.dividerLine} />
-                <Text style={styles.dividerText}>or</Text>
-                <View style={styles.dividerLine} />
-              </View>
 
-              <View style={styles.socialButtons}>
-                <TouchableOpacity
-                  style={[styles.socialButton, styles.googleButton]}
-                  onPress={() => handleSocialSignUp('Google')}
-                >
-                  <Ionicons name="logo-google" size={20} color="#DB4437" />
-                  <Text style={styles.socialButtonText}>Sign Up with Google</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                  style={[styles.socialButton, styles.facebookButton]}
-                  onPress={() => handleSocialSignUp('Facebook')}
-                >
-                  <Ionicons name="logo-facebook" size={20} color="#4267B2" />
-                  <Text style={styles.socialButtonText}>Sign Up with Facebook</Text>
-                </TouchableOpacity>
-              </View>
-            </View>
 
             {/* Login Link */}
             <View style={styles.loginSection}>
@@ -520,51 +493,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     textAlign: 'center',
   },
-  socialSection: {
-    marginBottom: 30,
-  },
-  divider: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 20,
-  },
-  dividerLine: {
-    flex: 1,
-    height: 1,
-    backgroundColor: '#e0e0e0',
-  },
-  dividerText: {
-    marginHorizontal: 15,
-    fontSize: 14,
-    color: '#666',
-  },
-  socialButtons: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  socialButton: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 15,
-    borderRadius: 12,
-    marginHorizontal: 5,
-    borderWidth: 1,
-    borderColor: '#e0e0e0',
-  },
-  googleButton: {
-    backgroundColor: 'white',
-  },
-  facebookButton: {
-    backgroundColor: 'white',
-  },
-  socialButtonText: {
-    marginLeft: 8,
-    fontSize: 16,
-    fontWeight: '500',
-    color: '#333',
-  },
+
   loginSection: {
     flexDirection: 'row',
     justifyContent: 'center',

@@ -199,26 +199,30 @@ const SearchScreen = ({ navigation }: any) => {
           <Text style={styles.filterLabel}>Category</Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.filterOptions}>
             {renderFilterOption('All', '', () => setSelectedCategory(''))}
-            {mockCategories.map((category) =>
-              renderFilterOption(
-                category.name,
-                category.name,
-                () => setSelectedCategory(category.name)
-              )
-            )}
+            {mockCategories.map((category) => (
+              <View key={category.name}>
+                {renderFilterOption(
+                  category.name,
+                  category.name,
+                  () => setSelectedCategory(category.name)
+                )}
+              </View>
+            ))}
           </ScrollView>
 
           {/* Location Filter */}
           <Text style={styles.filterLabel}>Location</Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.filterOptions}>
             {renderFilterOption('All', '', () => setSelectedLocation(''))}
-            {mockLocations.map((location) =>
-              renderFilterOption(
-                location.name,
-                location.name,
-                () => setSelectedLocation(location.name)
-              )
-            )}
+            {mockLocations.map((location) => (
+              <View key={location.name}>
+                {renderFilterOption(
+                  location.name,
+                  location.name,
+                  () => setSelectedLocation(location.name)
+                )}
+              </View>
+            ))}
           </ScrollView>
 
           {/* Price Filter */}
@@ -391,6 +395,8 @@ const styles = StyleSheet.create({
   clearFiltersText: {
     fontSize: 14,
     color: '#007AFF',
+    fontWeight: '600',
+    marginLeft: 8,
   },
   filterLabel: {
     fontSize: 16,
@@ -498,12 +504,7 @@ const styles = StyleSheet.create({
     borderColor: '#007AFF',
     marginTop: 10,
   },
-  clearFiltersText: {
-    fontSize: 14,
-    color: '#007AFF',
-    fontWeight: '600',
-    marginLeft: 8,
-  },
+
   resultsHeader: {
     paddingHorizontal: 20,
     paddingVertical: 15,
