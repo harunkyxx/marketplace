@@ -155,9 +155,7 @@ const MyListingsScreen = ({ navigation }: any) => {
           <Ionicons name="arrow-back" size={24} color="#333" />
         </TouchableOpacity>
         <Text style={styles.title}>My Listings</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('CreateListing')}>
-          <Ionicons name="add" size={24} color="#4CAF50" />
-        </TouchableOpacity>
+      
       </View>
 
       <ScrollView 

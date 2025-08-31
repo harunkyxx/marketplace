@@ -153,9 +153,7 @@ const HomeScreen = ({ navigation }: any) => {
         <View style={styles.section}>
           <View style={styles.sectionHeader}>
             <Text style={styles.sectionTitle}>Featured Listings</Text>
-            <TouchableOpacity>
-              <Text style={styles.seeAllText}>See All</Text>
-            </TouchableOpacity>
+            
           </View>
           {isLoading ? (
             <View style={styles.loadingContainer}>
